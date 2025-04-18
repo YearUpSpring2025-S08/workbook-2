@@ -8,7 +8,10 @@ public class CellPhone {
     private String phoneNumber;
     private String owner;
 
-    public CellPhone(){
+
+
+
+    public CellPhone() {
         this.serialNumber = 0;
         this.model = "";
         this.carrier = "";
@@ -16,24 +19,33 @@ public class CellPhone {
         this.owner = "";
     }
 
-    public int getSerialNumber(){
-        return this.serialNumber;
+    public void dial(String phoneNumber){
+        System.out.printf("%s's Cell phone is dialing the number %s from the number %s\n", this.owner, phoneNumber, this.getPhoneNumber());
     }
 
-    public void setSerialNumber(int serialNumber){
+    public void dial(CellPhone phone){
+        System.out.printf("%s's Cell phone is dialing the number %s from the number %s\n", this.owner, phone.phoneNumber, this.getPhoneNumber());
+    }
+
+
+    public int getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
 
-    public String getModel(){
-        return this.model;
+    public String getModel() {
+        return model;
     }
 
-    public void setModel(String model){
+    public void setModel(String model) {
         this.model = model;
     }
 
     public String getCarrier() {
-        return this.carrier;
+        return carrier;
     }
 
     public void setCarrier(String carrier) {
@@ -41,7 +53,7 @@ public class CellPhone {
     }
 
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -49,10 +61,21 @@ public class CellPhone {
     }
 
     public String getOwner() {
-        return this.owner;
+        return owner;
     }
 
-    public void setOwner(String owner){
+    public void setOwner(String owner) {
         this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return "CellPhone{" +
+                "serialNumber=" + serialNumber +
+                ", model='" + model + '\'' +
+                ", carrier='" + carrier + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", owner='" + owner + '\'' +
+                '}';
     }
 }

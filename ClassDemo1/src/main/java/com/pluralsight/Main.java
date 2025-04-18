@@ -37,7 +37,13 @@ public class Main {
         System.out.println(thePerson.getFullname());
         System.out.println(theOtherPerson.getFullname());
 
-       displayPerson(thePerson);
+        thePerson.haveABirthday();
+
+        System.out.println(thePerson);
+        System.out.println(theOtherPerson);
+        //System.out.printl
+
+      // displayPerson(thePerson);
        displayPerson(theOtherPerson);
 
        // savePerson(fullname, age, profession);
@@ -45,10 +51,7 @@ public class Main {
 
     public static void displayPerson(Person person) {
 
-        System.out.printf("Person %s is a %s and is %d years old.\n"
-                , person.getFullname()
-                , person.getProfession()
-                , person.getAge());
+        System.out.println(person.toString());
     }
 
     public static void savePerson(String fullname, int age, String profession){

@@ -31,6 +31,9 @@ public class CellPhoneApplication {
         System.out.println(phone.getOwner());
 
 
+        phone.dial("212-555-9999");
+        phone.dial("600-400-0000");
+
 
     }
 }
